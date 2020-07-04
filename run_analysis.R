@@ -1,6 +1,6 @@
 library(dplyr)
 
-filename <- "Coursera_DS3_Final.zip"
+filename <- "week3Assignment"
 
 # Checking if archive already exists.
 if (!file.exists(filename)){
@@ -14,7 +14,7 @@ if (!file.exists("UCI HAR Dataset")) {
 }
 
 ## Assigning the dataframes
-features <- read.table("UCI HAR Dataset/features.txt", col.names = c("n","functions"))
+features <- read.table("UCI HAR Dataset/features.txt", col.names = c("id","functions"))
 activities <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("code", "activity"))
 subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt", col.names = "subject")
 x_test <- read.table("UCI HAR Dataset/test/X_test.txt", col.names = features$functions)
